@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+   
+    <div class="container"> <h3 id="haj">Find area and perimeter of Triangle(right angle triangle)</h3>
+        <h4 > base(A) :<br />
+            <input type="number" id="leng" placeholder="enter base"
+            value="" /></h4>
+             <h4 > height(B) :<br />q
+            <input type="number" id="bre" placeholder="enter height"
+            value="" /></h4>
+             <h4 > (C) :<br />
+            <input type="number" id="c" placeholder="enter side (c)"
+            value="" /></h4>
+        <input type="submit" id="btn" value="click" /> 
+        <h5>base : <span id="rad"></span></h5>
+        <h5>height: <span id="rad2"></span></h5>
+         <h5>(C) : <span id="rad3"></span></h5>
+        <h5>area : <span id="area"></span></h5>
+        <h5>perimeter : <span id="per"></span></h5>
+       
+   </div>
+   
+</body>
+<style type="text/css" media="all">
+    * {
+        margin: 5px;
+        padding: 5px;
+       
+           }
+#haj{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+    body {
+        background-color:#343434;
+        color:#fff;
+      
+    }
+.container{
+      border:3px solid white;
+ border-radius: 50px;
+ margin: 20px;
+ }
+    #btn {
+      
+   
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 12px;
+
+    }
+    #in {
+        border: 1px solid black;
+        border-radius: 50px;
+    
+
+    }
+</style>
+<script type="text/javascript" charset="utf-8">
+    let l = document.getElementById("leng");
+    let out = document.getElementById("rad");
+    let btn = document.getElementById("btn");
+    let out2 = document.getElementById("area");
+    let out3 = document.getElementById("per");
+  let b =document.getElementById("bre");
+ let oot = document.getElementById("rad2");
+    let out4 = document.getElementById("rad3");
+    
+    
+    function le() {
+
+        out.innerHTML = l.value;
+    }
+
+    btn.addEventListener('click', le);
+
+
+
+function br() {
+    oot.innerHTML = b.value;
+}
+
+  btn.addEventListener('click', br);
+
+function ccc() {
+    out4.innerHTML = c.value;
+}
+
+  btn.addEventListener('click', ccc);
+
+  
+   function area() {
+        let a = (Number(l.value) *Number(b.value))/2;
+        out2.innerHTML = a;
+    }
+
+    btn.addEventListener('click', area);
+
+
+    function peri() {
+        let p =(Number(l.value) + Number(b.value) + Number(c.value));
+        out3.innerHTML = p;
+
+    }
+
+    btn.addEventListener('click', peri);
+
+   function valid() {
+        if( l.value < 0){
+      
+          out2.innerHTML="base must be positive number";
+          out3.innerHTML="base must be positive number";
+    
+            
+      }  
+    }
+       btn.addEventListener('click', valid);
+       
+        function valid2() {
+        if( b.value < 0){
+      
+          out2.innerHTML="height must be positive number";
+          out3.innerHTML="height must be positive number";
+    
+            
+      }  
+    }
+       btn.addEventListener('click', valid2);
+       
+         function valid3() {
+        if( b.value && l.value < 0){
+      
+          out2.innerHTML="base and height must be positive number";
+          out3.innerHTML="base and height must be positive number";
+    
+            
+      }  
+    }
+       btn.addEventListener('click', valid3);
+       
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+       <svg id="batt" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16"> <path d="M2 6h10v4H2V6z"/> <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/> </svg>
+       <b id="bi">
+           <div ></div>
+       </b>
+    </header>
+       <div id="row"> 
+    <div id="column">
+        
+   <a href="mathf.html"><div id="circlec"> Area formulas</br>(2-d)</div> </a> 
+   <a href="algebraf.html"><div id="square">algebra formulas</div></a>   
+   <a href=""><div id="triangle"></div> </a> 
+   
+   </div>
+     <div id="columnb">
+        
+   <a href="mathfp.html"><div id="rectangle"></div> </a> 
+   <a href=""><div id="rhombus"></div></a>
+   <a href=""><div id="parallelogram"></div>  </a>
+   
+   </div>
+</div>
+    </body>
+     <script>
+  let bi =  document.getElementById("bi")
+    navigator.getBattery().then(function(battery) {
+
+    let level = battery.level ;
+
+   
+     bi.innerHTML = Math.round(level*100)+"%";
+})
+  </script>
+</html>
+
+
+
